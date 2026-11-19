@@ -1,0 +1,146 @@
+
+/* Estilos generales del dashboard */
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor principal */
+
+.dashboard {
+  width: 100%;
+  min-height: 100vh;
+  padding: 24px;
+  background-color: #ffffff;
+  color: #212121;
+}
+
+/* Encabezado */
+
+.dashboard-header {
+  width: 100%;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.dashboard-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #212121;
+  margin: 0 0 24px;
+}
+
+/* Contenedores de información */
+
+.dashboard-section {
+  width: 100%;
+  min-width: 0;
+  margin-bottom: 24px;
+}
+
+/* Indicadores meteorológicos */
+
+.weather-indicators {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
+.weather-card {
+  min-width: 0;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Selector de ciudades */
+
+.city-selector {
+  width: 100%;
+  min-width: 0;
+}
+
+/* Gráfico y tabla */
+
+.dashboard-content {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+.dashboard-panel {
+  min-width: 0;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+/* Información adicional */
+
+.dashboard-extra {
+  width: 100%;
+  margin-top: 24px;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+/* Adaptación a tablets */
+
+@media (max-width: 900px) {
+  .dashboard {
+    padding: 16px;
+  }
+
+  .weather-indicators {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dashboard-content {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-title {
+    font-size: 2rem;
+  }
+}
+
+/* Adaptación a celulares */
+
+@media (max-width: 600px) {
+  .dashboard {
+    padding: 12px;
+  }
+
+  .weather-indicators {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-title {
+    font-size: 1.6rem;
+  }
+
+  .weather-card,
+  .dashboard-panel {
+    padding: 16px;
+  }
+}
+
+.dashboard-header {
+  width: 100%;
+  text-align: center;
+}
+
+.dashboard-title {
+  text-align: center;
+  margin: 0 auto 24px;
+}
